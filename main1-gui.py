@@ -6,7 +6,6 @@ import numpy as np
 
 
 class GUI:
-
     def __init__(self, window):
         # 'StringVar()' is used to get the instance of input field
         self.input_text = StringVar()
@@ -24,9 +23,6 @@ class GUI:
         ttk.Entry(window,
                   textvariable=self.input_text,
                   width=70).grid(row=0, column=1, ipadx=1, ipady=1)
-
-        #ttk.Button(window, text="Enova File", command=lambda: self.set_path_Enova_field()).grid(row=1, ipadx=5, ipady=15)
-        #ttk.Entry(window, textvariable=self.input_text1, width=70).grid(row=1, column=1, ipadx=1, ipady=1)
 
         ttk.Label(window, text="Specify delimiter:").grid(
             row=1, ipadx=5, ipady=15)
