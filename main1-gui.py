@@ -46,6 +46,8 @@ class GUI:
         if delimiter not in [';', ',', '|']:
             delimiter = ';'
         path = self.get_csv_path()
+        if not path:
+            return
         df = pd.read_csv(path, delimiter=delimiter)
         groups = df.groupby(np.arange(len(df.index)) / 10000)
         for (frameno, frame) in groups:
